@@ -42,7 +42,7 @@
                <span class="text-danger">{{$message}}</span>
                     @enderror
                     <div class="input-field col s12">
-                        <input id="last_name" type="password" class="validate" name="password" placeholder="Password">
+                        <input id="last_name" type="password" class="validate" name="pws" placeholder="Password">
                         <!-- <label for="last_name">Password</label> -->
                     </div>
                 </div>
