@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\AuthController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,17 +17,17 @@ Route::get('/', function () {
     return view('admin.register');
 });
 
-Route::POST('register', [UserController::class, 'register'])->name('register');
+Route::POST('register', [AuthController::class, 'register'])->name('register');
 
-Route::GET('/login', [UserController::class, 'login'])->name('login');
+Route::GET('/login', [AuthController::class, 'login'])->name('login');
 
-Route::POST('/login', [UserController::class, 'login_user'])->name('login.user');
+Route::POST('/login', [AuthController::class, 'login_user'])->name('login.user');
 
-Route::get('/index', [UserController::class, 'dashboard'])->name('admin.index')->middleware('auth');
+Route::get('/index', [AuthController::class, 'dashboard'])->name('admin.index')->middleware('auth');
 
 // This route handles the logout functionality
-Route::post('/logout', [UserController::class, 'logout_user'])->name('logout.user');
+Route::post('/logout', [AuthController::class, 'logout_user'])->name('logout.user');
 
 // This route shows the login page
-Route::get('/login', [UserController::class, 'logout'])->name('login');
+Route::get('/login', [AuthController::class, 'logout'])->name('login');
 
