@@ -12,11 +12,7 @@ $(document).ready(function() {
                 status: status
             },
             success: function(response) {
-                if(response.success) {
-                    alert(response.message);
-                } else {
-                    alert(response.message);
-                }
+                
             },
             error: function(xhr, status, error) {
                 console.log(xhr.responseText);
